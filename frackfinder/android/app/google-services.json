@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "196023827208",
+    "firebase_url": "https://drone-f64b8.firebaseio.com",
+    "project_id": "drone-f64b8",
+    "storage_bucket": "drone-f64b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196023827208:android:f59b12bc2b3abc62a5cabd",
+        "android_client_info": {
+          "package_name": "com.dji.importSDKDemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196023827208-rqflseg832vip535vc6grgft9oh5kfph.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dji.importSDKDemo",
+            "certificate_hash": "30c5817d6ad0271877965acbe96c53a64d794e4d"
+          }
+        },
+        {
+          "client_id": "196023827208-6r25md7irb23440270euos49cmhph72q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbPHCnFiOix8LpgqoXavIpnflOB1bYAnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196023827208-6r25md7irb23440270euos49cmhph72q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

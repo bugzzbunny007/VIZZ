@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'main.dart';
 class Page extends StatefulWidget {
   final Widget body;
   final String pageName;
@@ -15,7 +15,6 @@ class Page extends StatefulWidget {
 class _PageState extends State<Page> {
   final String pageName;
   final Widget body;
-
   _PageState(this.pageName, this.body);
 
   @override
@@ -65,6 +64,7 @@ class _PageState extends State<Page> {
           children: <Widget>[
             ProfileWidget(
               Image.asset("images/dummy_profile_picture.jpg"),
+
               'John Appleseed',
               MainAxisAlignment.start,
               fillerWidget: SizedBox(
