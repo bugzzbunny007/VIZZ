@@ -9,9 +9,8 @@ import 'dart:convert' as JSON;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:frackfinder/pages/splash.dart';
 
-
-
 void main() => runApp(FrackFinderApp());
+
 
 class FrackFinderApp extends StatelessWidget {
 
@@ -21,11 +20,11 @@ class FrackFinderApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'VizzBee',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.yellow,
       ),
-      initialRoute: MyHomePage.id,
+      initialRoute: "/",
       routes: {
-        MyHomePage.id: (BuildContext context) => MyHomePage(),
+        '/': (BuildContext context) => MyHomePage(),
         '/add_drone': (BuildContext context) => AddDronePage(),
         '/livestreams': (BuildContext context) => LivestreamsPage(),
         '/site_library': (BuildContext context) => SiteLibraryPage(),
@@ -51,6 +50,7 @@ class FrackFinderApp extends StatelessWidget {
   }
 }
 
+
 class MyAppState extends StatefulWidget {
   @override
   _MyAppStateState createState() => _MyAppStateState();
@@ -72,6 +72,7 @@ class _MyAppStateState extends State<MyAppState> {
         print(profile);
         setState(() {
           userProfile = profile;
+
           _isLoggedIn = true;
         });
         break;
@@ -84,14 +85,6 @@ class _MyAppStateState extends State<MyAppState> {
         break;
     }
   }
-  _logout()
-  {
-    facebookLogin.logOut();
-    setState(() {
-      _isLoggedIn = false;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -101,11 +94,11 @@ class _MyAppStateState extends State<MyAppState> {
               ? Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              facebookImage(),
+              userProfile["picture"],
               Text(userProfile["name"]),
               OutlineButton(
                 child: Text('logout'),
-                onPressed: (){_logout();},
+                onPressed: (){},
               )
             ],
           )
@@ -119,15 +112,16 @@ class _MyAppStateState extends State<MyAppState> {
       ),
     );
   }
-
-  Image facebookImage() {
-    return Image.network(
-              userProfile["picture"]["data"]["url"],
-              height: 50.0,
-              width: 50.0,
-            );
+//
+//  Image facebookImage() {
+//    return Image.network(
+//              userProfile["picture"]["data"]["url"],
+//              height: 50.0,
+//              width: 50.0,
+//            );
   }
-}
+
+
 class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
